@@ -27,10 +27,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _fullName.text = _directory.firstName;
+    _navBar.title = _directory.firstName;
+    _firstName.text = _directory.firstName;
+    _lastName.text = _directory.lastName;
     _AddressLine1.text = _directory.addressLine1;
     _AddressLine2.text = _directory.addressLine2;
-    _phoneNumber.text = _directory.homePhone;
+    _phoneNumber.text = _directory.studentPhone;
+    _emailAddress.text = _directory.studentEmail;
+    _parentsName.text = _directory.parentsName;
+    _HomePhone.text = _directory.homePhone;
+    _birthday.text = _directory.bday;
 }
 
 - (void)didReceiveMemoryWarning

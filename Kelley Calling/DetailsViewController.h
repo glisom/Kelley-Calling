@@ -12,9 +12,15 @@
 @interface DetailsViewController : UIViewController
 
 @property (weak, nonatomic) Directory *directory;
-@property (weak, nonatomic) IBOutlet UILabel *fullName;
+@property (weak, nonatomic) IBOutlet UILabel *firstName;
 @property (weak, nonatomic) IBOutlet UILabel *AddressLine1;
 @property (weak, nonatomic) IBOutlet UILabel *AddressLine2;
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
+@property (weak, nonatomic) IBOutlet UILabel *emailAddress;
+@property (weak, nonatomic) IBOutlet UILabel *parentsName;
+@property (weak, nonatomic) IBOutlet UILabel *HomePhone;
+@property (weak, nonatomic) IBOutlet UILabel *lastName;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
+@property (weak, nonatomic) IBOutlet UILabel *birthday;
 
 @end
