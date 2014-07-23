@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DirectoryViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
-@property (weak, nonatomic) IBOutlet UISearchBar *contactSearchBar;
-@property (strong,nonatomic) NSMutableArray *filteredResults;
 
 @end

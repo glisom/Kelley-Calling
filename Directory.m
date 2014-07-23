@@ -21,7 +21,7 @@
         _addrCode = [jsonDictionary objectForKey:@"ADDR_CODE"];
         _parentsName = [jsonDictionary objectForKey:@"Parents_Name"];
         _addressLine1 = [jsonDictionary objectForKey:@"ADDR"];
-        _addressLine2 = [jsonDictionary objectForKey:@"ADDR_CityStateZip"];
+        _addressLine2 = [jsonDictionary objectForKey:@"Addr_CityStateZip"];
         _bday = [jsonDictionary objectForKey:@"Bday"];
         _homePhone = [jsonDictionary objectForKey:@"Home_Num"];
         _studentPhone = [jsonDictionary objectForKey:@"Student_Phone"];

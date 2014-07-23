@@ -24,6 +24,7 @@
 		7B273815197EC84B00FB5F06 /* Directory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B273814197EC84B00FB5F06 /* Directory.m */; };
 		7B273818197ECAA800FB5F06 /* JSONLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B273817197ECAA800FB5F06 /* JSONLoader.m */; };
 		7B27381B197ECCA400FB5F06 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */; };
+		7BFC8A49197F038400125AD8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC8A48197F038400125AD8 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		7B273817197ECAA800FB5F06 /* JSONLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONLoader.m; sourceTree = "<group>"; };
 		7B273819197ECCA400FB5F06 /* DirectoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
 		7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
+		7BFC8A47197F038400125AD8 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		7BFC8A48197F038400125AD8 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				7B2737EE197EC65600FB5F06 /* Main.storyboard */,
 				7B273819197ECCA400FB5F06 /* DirectoryViewController.h */,
 				7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */,
+				7BFC8A47197F038400125AD8 /* DetailsViewController.h */,
+				7BFC8A48197F038400125AD8 /* DetailsViewController.m */,
 				7B2737F4197EC65600FB5F06 /* Images.xcassets */,
 				7B2737E3197EC65600FB5F06 /* Supporting Files */,
 			);
@@ -266,6 +271,7 @@
 				7B2737ED197EC65600FB5F06 /* AppDelegate.m in Sources */,
 				7B2737E9197EC65600FB5F06 /* main.m in Sources */,
 				7B273815197EC84B00FB5F06 /* Directory.m in Sources */,
+				7BFC8A49197F038400125AD8 /* DetailsViewController.m in Sources */,
 				7B27381B197ECCA400FB5F06 /* DirectoryViewController.m in Sources */,
 				7B273818197ECAA800FB5F06 /* JSONLoader.m in Sources */,
 			);
@@ -472,6 +478,7 @@
 				7B27380D197EC65600FB5F06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B27380E197EC65600FB5F06 /* Build configuration list for PBXNativeTarget "Kelley CallingTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +487,7 @@
 				7B273810197EC65600FB5F06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
