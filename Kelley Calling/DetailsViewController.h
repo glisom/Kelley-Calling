@@ -22,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastName;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 @property (weak, nonatomic) IBOutlet UILabel *birthday;
+@property (weak, nonatomic) IBOutlet UILabel *gradeLevel;
 
 @end

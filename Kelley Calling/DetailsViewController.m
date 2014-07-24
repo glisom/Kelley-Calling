@@ -37,6 +37,7 @@
     _parentsName.text = _directory.parentsName;
     _HomePhone.text = _directory.homePhone;
     _birthday.text = _directory.bday;
+    _gradeLevel.text = _directory.grade;
 }
 
 - (void)didReceiveMemoryWarning

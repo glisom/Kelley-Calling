@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     
-    
+    [super viewDidLoad];
     
     // create a mutable array to contain products for the search results table
     //self.searchResults = [NSMutableArray arrayWithCapacity:[self.info count]];
@@ -39,12 +39,13 @@
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     });
     
-    [super viewDidLoad];
+    [self.searchDisplayController.searchResultsTableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"LocationCell"];
+
 }
 
 // Just before showing the LocationDetailViewController, set the selected Location object
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    DetailsViewController *vc = segue.destinationViewController;
+    /*DetailsViewController *vc = segue.destinationViewController;
     NSIndexPath *indexPath = nil;
     if (self.searchDisplayController.active) {
         indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
@@ -52,8 +53,24 @@
     } else {
         indexPath = [self.tableView indexPathForCell:sender];
         vc.directory = [info objectAtIndex:indexPath.row];
-    }
+    }*/
     
+    
+     if ([segue.identifier isEqualToString:@"showInfoDetail"]) {
+     NSIndexPath *indexPath = nil;
+     Directory *directory = nil;
+     
+     if (self.searchDisplayController.active) {
+     indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+     directory = [searchResults objectAtIndex:indexPath.row];
+     } else {
+     indexPath = [self.tableView indexPathForSelectedRow];
+     directory = [info objectAtIndex:indexPath.row];
+     }
+     
+     DetailsViewController *destViewController = segue.destinationViewController;
+     destViewController.directory = directory;
+     }
     
 }
 
@@ -63,6 +80,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCell"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
+    }
+    
     Directory *directory = nil;
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {

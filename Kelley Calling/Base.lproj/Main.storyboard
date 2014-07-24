@@ -45,7 +45,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="181-MB-bBM" kind="push" id="bgs-5k-Gld"/>
+                                    <segue destination="181-MB-bBM" kind="push" identifier="showInfoDetail" id="bgs-5k-Gld"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -196,6 +196,7 @@
                         <outlet property="birthday" destination="Xal-rG-ctw" id="ID9-Cr-QyF"/>
                         <outlet property="emailAddress" destination="2fv-y3-VQy" id="7d2-Hq-5fU"/>
                         <outlet property="firstName" destination="LSM-X5-4Wo" id="1p4-hY-uyz"/>
+                        <outlet property="gradeLevel" destination="Hi0-Hi-VY9" id="Fwy-PI-cGG"/>
                         <outlet property="lastName" destination="CWr-XK-685" id="elj-N0-AkJ"/>
                         <outlet property="navBar" destination="759-BR-dlT" id="sZA-on-TNv"/>
                         <outlet property="parentsName" destination="BL9-9K-Lf5" id="aSU-7r-FI1"/>
