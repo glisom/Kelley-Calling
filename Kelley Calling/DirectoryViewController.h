@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DirectoryViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface DirectoryViewController : UITableViewController 
+
 
 @end

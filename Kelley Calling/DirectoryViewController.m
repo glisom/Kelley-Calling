@@ -16,11 +16,17 @@
 @end
 
 @implementation DirectoryViewController {
-    NSArray *_info;
+    NSArray *searchResults;
+    NSArray *info;
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    
+    
+    
+    // create a mutable array to contain products for the search results table
+    //self.searchResults = [NSMutableArray arrayWithCapacity:[self.info count]];
+    
     // Create a new JSONLoader with a local file URL
     JSONLoader *jsonLoader = [[JSONLoader alloc] init];
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"BishopKelley" withExtension:@"json"];
@@ -28,25 +34,42 @@
     // Load the data on a background queue...
     // As we are using a local file it's not really necessary, but if we were connecting to an online URL then we'd need it
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        _info = [jsonLoader informationFromJSONFile:url];
+        info = [jsonLoader informationFromJSONFile:url];
         // Now that we have the data, reload the table data on the main UI thread
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     });
+    
+    [super viewDidLoad];
 }
 
 // Just before showing the LocationDetailViewController, set the selected Location object
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DetailsViewController *vc = segue.destinationViewController;
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    vc.directory = [_info objectAtIndex:indexPath.row];
+    NSIndexPath *indexPath = nil;
+    if (self.searchDisplayController.active) {
+        indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+        vc.directory = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        indexPath = [self.tableView indexPathForCell:sender];
+        vc.directory = [info objectAtIndex:indexPath.row];
+    }
+    
+    
 }
 
 
 #pragma mark - Table View Controller Methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCell"];
-    Directory *directory = [_info objectAtIndex:indexPath.row];
+    Directory *directory = nil;
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        directory = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        directory = [info objectAtIndex:indexPath.row];
+    }
     
     NSString *fullname = [NSString stringWithFormat:@"%@ %@", directory.firstName, directory.lastName];
     cell.textLabel.text = fullname;
@@ -68,7 +91,29 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_info count];
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+    } else {
+        return [info count];
+    }
 }
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"_firstName contains[c] %@", searchText];
+    searchResults = [info filteredArrayUsingPredicate:resultPredicate];
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
 
 @end
