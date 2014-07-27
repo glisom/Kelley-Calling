@@ -9,7 +9,8 @@
 #import "DirectoryViewController.h"
 #import "JSONLoader.h"
 #import "Directory.h"
-#import "DetailsViewController.h"
+#import "DetailViewController.h"
+#import "DirectoryViewCell.h"
 
 @interface DirectoryViewController ()
 
@@ -45,17 +46,6 @@
 
 // Just before showing the LocationDetailViewController, set the selected Location object
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    /*DetailsViewController *vc = segue.destinationViewController;
-    NSIndexPath *indexPath = nil;
-    if (self.searchDisplayController.active) {
-        indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-        vc.directory = [searchResults objectAtIndex:indexPath.row];
-    } else {
-        indexPath = [self.tableView indexPathForCell:sender];
-        vc.directory = [info objectAtIndex:indexPath.row];
-    }*/
-    
-    
      if ([segue.identifier isEqualToString:@"showInfoDetail"]) {
      NSIndexPath *indexPath = nil;
      Directory *directory = nil;
@@ -68,10 +58,15 @@
      directory = [info objectAtIndex:indexPath.row];
      }
      
-     DetailsViewController *destViewController = segue.destinationViewController;
+     DetailViewController *destViewController = segue.destinationViewController;
      destViewController.directory = directory;
      }
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 71;
 }
 
 
@@ -79,10 +74,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCell"];
+    static NSString *CellIdentifier = @"LocationCell";
+    DirectoryViewCell *cell = (DirectoryViewCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationCell"];
+    // Configure the cell...
+    if (cell == nil) {
+        cell = [[DirectoryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     Directory *directory = nil;
@@ -94,7 +91,7 @@
     }
     
     NSString *fullname = [NSString stringWithFormat:@"%@ %@", directory.firstName, directory.lastName];
-    cell.textLabel.text = fullname;
+    cell.nameLabel.text = fullname;
     
     NSString *grade;
     if ([directory.grade isEqual:@"(9)"]) {
@@ -107,7 +104,7 @@
         grade = @"Senior";
     }
     
-    cell.detailTextLabel.text = grade;
+    cell.gradeLabel.text = grade;
     
     return cell;
 }
@@ -123,7 +120,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"_firstName contains[c] %@", searchText];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(_firstName contains [cd] %@) OR (_lastName contains [cd] %@)", searchText, searchText];
     searchResults = [info filteredArrayUsingPredicate:resultPredicate];
 }
 
@@ -135,6 +132,19 @@
                                                      selectedScopeButtonIndex]]];
     
     return YES;
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // this UIViewController is about to re-appear, make sure we remove the current selection in our table view
+    NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
+    [self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
+    
+    // some over view controller could have changed our nav bar tint color, so reset it here
+    //self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
 }
 
 

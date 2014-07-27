@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DirectoryViewController : UITableViewController 
+@interface DirectoryViewController : UITableViewController
 
 
 @end

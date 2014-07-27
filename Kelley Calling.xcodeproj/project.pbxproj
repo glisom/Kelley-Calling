@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0F0ABB1981FBBB003E69C0 /* DirectoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F0ABA1981FBBB003E69C0 /* DirectoryViewCell.m */; };
 		7B2737DD197EC65600FB5F06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2737DC197EC65600FB5F06 /* Foundation.framework */; };
 		7B2737DF197EC65600FB5F06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2737DE197EC65600FB5F06 /* CoreGraphics.framework */; };
 		7B2737E1197EC65600FB5F06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2737E0197EC65600FB5F06 /* UIKit.framework */; };
@@ -24,6 +25,8 @@
 		7B273818197ECAA800FB5F06 /* JSONLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B273817197ECAA800FB5F06 /* JSONLoader.m */; };
 		7B27381B197ECCA400FB5F06 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */; };
 		7B69614E19809949007353AF /* BishopKelley.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B69614D19809949007353AF /* BishopKelley.json */; };
+		7BBBB0C0198427F6003F273A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBBB0BF198427F6003F273A /* DetailViewController.m */; };
+		7BBBB0C4198452DA003F273A /* messagesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BBBB0C3198452DA003F273A /* messagesIcon.png */; };
 		7BFC8A49197F038400125AD8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC8A48197F038400125AD8 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B0F0AB91981FBBB003E69C0 /* DirectoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewCell.h; sourceTree = "<group>"; };
+		7B0F0ABA1981FBBB003E69C0 /* DirectoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewCell.m; sourceTree = "<group>"; };
 		7B2737D9197EC65600FB5F06 /* Kelley Calling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kelley Calling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2737DC197EC65600FB5F06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B2737DE197EC65600FB5F06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +67,9 @@
 		7B273819197ECCA400FB5F06 /* DirectoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
 		7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
 		7B69614D19809949007353AF /* BishopKelley.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BishopKelley.json; sourceTree = "<group>"; };
+		7BBBB0BE198427F6003F273A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7BBBB0BF198427F6003F273A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7BBBB0C3198452DA003F273A /* messagesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagesIcon.png; sourceTree = "<group>"; };
 		7BFC8A47197F038400125AD8 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		7BFC8A48197F038400125AD8 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +101,7 @@
 		7B2737D0197EC65600FB5F06 = {
 			isa = PBXGroup;
 			children = (
+				7BBBB0C3198452DA003F273A /* messagesIcon.png */,
 				7B69614D19809949007353AF /* BishopKelley.json */,
 				7B273816197ECAA800FB5F06 /* JSONLoader.h */,
 				7B273817197ECAA800FB5F06 /* JSONLoader.m */,
@@ -131,8 +140,12 @@
 				7B2737EB197EC65600FB5F06 /* AppDelegate.h */,
 				7B2737EC197EC65600FB5F06 /* AppDelegate.m */,
 				7B2737EE197EC65600FB5F06 /* Main.storyboard */,
+				7BBBB0BE198427F6003F273A /* DetailViewController.h */,
+				7BBBB0BF198427F6003F273A /* DetailViewController.m */,
 				7B273819197ECCA400FB5F06 /* DirectoryViewController.h */,
 				7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */,
+				7B0F0AB91981FBBB003E69C0 /* DirectoryViewCell.h */,
+				7B0F0ABA1981FBBB003E69C0 /* DirectoryViewCell.m */,
 				7BFC8A47197F038400125AD8 /* DetailsViewController.h */,
 				7BFC8A48197F038400125AD8 /* DetailsViewController.m */,
 				7B2737F4197EC65600FB5F06 /* Images.xcassets */,
@@ -250,6 +263,7 @@
 				7B2737F5197EC65600FB5F06 /* Images.xcassets in Resources */,
 				7B2737E7197EC65600FB5F06 /* InfoPlist.strings in Resources */,
 				7B2737F0197EC65600FB5F06 /* Main.storyboard in Resources */,
+				7BBBB0C4198452DA003F273A /* messagesIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +285,10 @@
 				7B2737ED197EC65600FB5F06 /* AppDelegate.m in Sources */,
 				7B2737E9197EC65600FB5F06 /* main.m in Sources */,
 				7B273815197EC84B00FB5F06 /* Directory.m in Sources */,
+				7BBBB0C0198427F6003F273A /* DetailViewController.m in Sources */,
 				7BFC8A49197F038400125AD8 /* DetailsViewController.m in Sources */,
 				7B27381B197ECCA400FB5F06 /* DirectoryViewController.m in Sources */,
+				7B0F0ABB1981FBBB003E69C0 /* DirectoryViewCell.m in Sources */,
 				7B273818197ECAA800FB5F06 /* JSONLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
