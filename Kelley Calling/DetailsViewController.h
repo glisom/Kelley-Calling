@@ -24,4 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *birthday;
 @property (weak, nonatomic) IBOutlet UILabel *gradeLevel;
 
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+
 @end

@@ -59,7 +59,7 @@
     
     if ([_directory.studentEmail isEqual:@""]) {
         _emailAddress.enabled = NO;
-        [_phoneButton setTitle:@"Not Found" forState:UIControlStateDisabled];
+        [_emailAddress setTitle:@"Not Found" forState:UIControlStateDisabled];
     } else {
         [_emailAddress setTitle:_directory.studentEmail forState:UIControlStateNormal];
         [_emailAddress setTitle:_directory.studentEmail forState:UIControlStateSelected];
@@ -185,9 +185,10 @@
 }
 
 - (IBAction)addressPressed:(id)sender {
-    NSLog(@"pressed");
-    NSString *address = [NSString stringWithFormat:@"%@%@%@", @"http://maps.apple.com/?q=", _directory.addressLine1, _directory.addressLine2];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:address]];
+    NSString *address = [NSString stringWithFormat:@"%@ %@", _directory.addressLine1, _directory.addressLine2];
+    NSString *myString = [address stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    NSString* urlString = [NSString stringWithFormat:@"http://maps.apple.com/maps?q=%@", myString];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 
 

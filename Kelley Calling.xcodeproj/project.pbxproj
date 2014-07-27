@@ -27,6 +27,8 @@
 		7B69614E19809949007353AF /* BishopKelley.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B69614D19809949007353AF /* BishopKelley.json */; };
 		7BBBB0C0198427F6003F273A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBBB0BF198427F6003F273A /* DetailViewController.m */; };
 		7BBBB0C4198452DA003F273A /* messagesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BBBB0C3198452DA003F273A /* messagesIcon.png */; };
+		7BD192A919857D63005DB209 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD192A819857D63005DB209 /* CoreData.framework */; };
+		7BD192AC19857DE9005DB209 /* Login.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD192AA19857DE9005DB209 /* Login.xcdatamodeld */; };
 		7BFC8A49197F038400125AD8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC8A48197F038400125AD8 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		7BBBB0BE198427F6003F273A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7BBBB0BF198427F6003F273A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7BBBB0C3198452DA003F273A /* messagesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagesIcon.png; sourceTree = "<group>"; };
+		7BD192A819857D63005DB209 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7BD192AB19857DE9005DB209 /* Login.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Login.xcdatamodel; sourceTree = "<group>"; };
 		7BFC8A47197F038400125AD8 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		7BFC8A48197F038400125AD8 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD192A919857D63005DB209 /* CoreData.framework in Frameworks */,
 				7B2737DF197EC65600FB5F06 /* CoreGraphics.framework in Frameworks */,
 				7B2737E1197EC65600FB5F06 /* UIKit.framework in Frameworks */,
 				7B2737DD197EC65600FB5F06 /* Foundation.framework in Frameworks */,
@@ -101,6 +106,7 @@
 		7B2737D0197EC65600FB5F06 = {
 			isa = PBXGroup;
 			children = (
+				7BD192AA19857DE9005DB209 /* Login.xcdatamodeld */,
 				7BBBB0C3198452DA003F273A /* messagesIcon.png */,
 				7B69614D19809949007353AF /* BishopKelley.json */,
 				7B273816197ECAA800FB5F06 /* JSONLoader.h */,
@@ -126,6 +132,7 @@
 		7B2737DB197EC65600FB5F06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BD192A819857D63005DB209 /* CoreData.framework */,
 				7B2737DC197EC65600FB5F06 /* Foundation.framework */,
 				7B2737DE197EC65600FB5F06 /* CoreGraphics.framework */,
 				7B2737E0197EC65600FB5F06 /* UIKit.framework */,
@@ -287,6 +294,7 @@
 				7B273815197EC84B00FB5F06 /* Directory.m in Sources */,
 				7BBBB0C0198427F6003F273A /* DetailViewController.m in Sources */,
 				7BFC8A49197F038400125AD8 /* DetailsViewController.m in Sources */,
+				7BD192AC19857DE9005DB209 /* Login.xcdatamodeld in Sources */,
 				7B27381B197ECCA400FB5F06 /* DirectoryViewController.m in Sources */,
 				7B0F0ABB1981FBBB003E69C0 /* DirectoryViewCell.m in Sources */,
 				7B273818197ECAA800FB5F06 /* JSONLoader.m in Sources */,
@@ -506,6 +514,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7BD192AA19857DE9005DB209 /* Login.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7BD192AB19857DE9005DB209 /* Login.xcdatamodel */,
+			);
+			currentVersion = 7BD192AB19857DE9005DB209 /* Login.xcdatamodel */;
+			path = Login.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B2737D1197EC65600FB5F06 /* Project object */;
 }
