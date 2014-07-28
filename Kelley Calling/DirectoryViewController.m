@@ -12,6 +12,7 @@
 #import "DetailViewController.h"
 #import "DirectoryViewCell.h"
 
+
 @interface DirectoryViewController ()
 
 @end
@@ -120,8 +121,24 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"(_firstName contains [cd] %@) OR (_lastName contains [cd] %@)", searchText, searchText];
-    searchResults = [info filteredArrayUsingPredicate:resultPredicate];
+    NSString *text = searchText;
+    NSString *searchiText = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    NSArray *array = [searchiText componentsSeparatedByString:@" "];
+    NSString *firstName = searchiText;
+    NSString *lastName = searchiText;
+    NSPredicate *predicate = nil;
+    
+    if ([array count] > 1) {
+        firstName = array[0];
+        lastName = array[1];
+        predicate = [NSPredicate predicateWithFormat:@"(firstName CONTAINS[cd] %@ AND lastName CONTAINS[cd] %@) OR (firstName CONTAINS[cd] %@ AND lastName CONTAINS[cd] %@)", firstName, lastName, lastName, firstName];
+    } else {
+        predicate = [NSPredicate predicateWithFormat:@"firstName CONTAINS[cd] %@ OR lastName CONTAINS[cd] %@", firstName, lastName];
+    }
+    
+    searchResults = [info filteredArrayUsingPredicate:predicate];
+    NSLog(@"%@", searchResults);
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DirectoryViewController.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -14,8 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    
+    NSString *storyboardId = [[NSUserDefaults standardUserDefaults] boolForKey:@"LoggedIn"] == YES ? @"Directory" : @"LoginScreen";
+    self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:storyboardId];
     return YES;
 }
 							
