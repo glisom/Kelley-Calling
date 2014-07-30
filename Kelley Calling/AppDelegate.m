@@ -16,6 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     NSString *storyboardId = [[NSUserDefaults standardUserDefaults] boolForKey:@"LoggedIn"] == YES ? @"Directory" : @"LoginScreen";
     self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:storyboardId];
     return YES;

@@ -39,6 +39,7 @@
                                             <rect key="frame" x="20" y="39" width="267" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" red="0.76470595598220825" green="0.0" blue="0.0039215688593685627" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -142,7 +143,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                     <state key="normal" title="918-691-9891">
-                                                        <color key="titleColor" red="0.54274064779999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="phonePressed:" destination="voe-Lj-LVH" eventType="touchUpInside" id="9hW-x0-cMX"/>
@@ -179,7 +180,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                     <state key="normal" title="Leawood, KS 66224">
-                                                        <color key="titleColor" red="0.54274064779999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="addressPressed:" destination="voe-Lj-LVH" eventType="touchUpInside" id="Yuz-0Q-en3"/>
@@ -190,7 +191,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                     <state key="normal" title="14167 Juniper St">
-                                                        <color key="titleColor" red="0.54274064779999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -218,7 +219,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                     <state key="normal" title="grant.isom@gmail.com">
-                                                        <color key="titleColor" red="0.54274064779999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -268,7 +269,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                     <state key="normal" title="918-691-9891">
-                                                        <color key="titleColor" red="0.54274064779999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="homePhonePressed:" destination="voe-Lj-LVH" eventType="touchUpInside" id="Lgn-g5-kJc"/>
@@ -362,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioG-Vd-3u8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-292" y="44"/>
+            <point key="canvasLocation" x="-633" y="44"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gxI-0l-Gbu">
@@ -374,7 +375,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.54274064781021902" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                             <color key="textShadowColor" white="0.64113822992700731" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
