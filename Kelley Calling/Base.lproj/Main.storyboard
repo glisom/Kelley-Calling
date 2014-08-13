@@ -90,22 +90,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="322"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Bishop Kelley Student DirectoryThis 2014-2015 Kelley Calling is for the exclusive use of the Bishop Kelley students, parents, faculty and staff.It must not be used for the promotion of any activities unrelated to Bishop Kelley High School.It must not be used for personal gain, or be made available for commercial or solicitation purposes, including any use by non-profit organizations.</string>
+                                <string key="text">Bishop Kelley Student Directory
+This 2014-2015 Kelley Calling is for the exclusive use of the Bishop Kelley students, parents, faculty and staff.
+It must not be used for the promotion of any activities unrelated to Bishop Kelley High School.
+It must not be used for personal gain, or be made available for commercial or solicitation purposes, including any use by non-profit organizations.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bnp-Y0-MsP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnp-Y0-MsP">
                                 <rect key="frame" x="0.0" y="330" width="320" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">For information regarding the use of this app, please contact Bishop Kelley, 918-627-3390, or Grant Isom 918-691-9891.
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">For information regarding the use of this app, please contact Bishop Kelley, 918-627-3390, or Grant Isom 918-691-9891.
 
 grantisom.com
 
 grant.isom@gmail.com
 
-Crate Development Group</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Crate Development">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
