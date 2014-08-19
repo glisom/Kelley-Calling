@@ -25,19 +25,13 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    // create a mutable array to contain products for the search results table
-    //self.searchResults = [NSMutableArray arrayWithCapacity:[self.info count]];
-    
-    // Create a new JSONLoader with a local file URL
+
     JSONLoader *jsonLoader = [[JSONLoader alloc] init];
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"BishopKelley" withExtension:@"json"];
     
-    // Load the data on a background queue...
-    // As we are using a local file it's not really necessary, but if we were connecting to an online URL then we'd need it
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         info = [jsonLoader informationFromJSONFile:url];
-        // Now that we have the data, reload the table data on the main UI thread
+       
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     });
     
@@ -45,7 +39,7 @@
 
 }
 
-// Just before showing the LocationDetailViewController, set the selected Location object
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
      if ([segue.identifier isEqualToString:@"showInfoDetail"]) {
      NSIndexPath *indexPath = nil;
@@ -155,13 +149,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    // this UIViewController is about to re-appear, make sure we remove the current selection in our table view
     NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
     [self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
-    
-    // some over view controller could have changed our nav bar tint color, so reset it here
-    //self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
 }
 
 

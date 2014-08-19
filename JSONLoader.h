@@ -11,5 +11,9 @@
 @interface JSONLoader : NSObject
 
 - (NSArray *)informationFromJSONFile:(NSURL *)url;
+- (NSArray *)informationFromPTOFile:(NSURL *)url;
+- (NSArray *)informationFromClubFile:(NSURL *)url;
+- (NSArray *)informationFromCommitteeFile:(NSURL *)url;
+
 
 @end

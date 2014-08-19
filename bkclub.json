@@ -1,0 +1,40 @@
+{
+  "bkclub":[
+    {
+      "CLUB":"BK CLUB '15",
+      "NAME":"Suzy Armstrong",
+      "EMAIL":"ss.armstrong@cox.net",
+      "PHONE":"918-520-6069"
+    },
+    {
+      "CLUB":"BK CLUB '16",
+      "NAME":"Lori Lassman",
+      "EMAIL":"lassmantul@gmail.com",
+      "PHONE":"918-760-7844"
+    },
+    {
+      "CLUB":"BK CLUB '16",
+      "NAME":"Jeanne Mandeville",
+      "EMAIL":"jmgmandeville@gmail.com",
+      "PHONE":"918-639-9415"
+    },
+    {
+      "CLUB":"BK CLUB '17",
+      "NAME":"Julie Davidson*",
+      "EMAIL":"juliedavidson@aol.com",
+      "PHONE":"918-760-0799"
+    },
+    {
+      "CLUB":"BK CLUB '17",
+      "NAME":"Karin Vaughn",
+      "EMAIL":"karin.vaughn@cox.net",
+      "PHONE":"918-850-5887"
+    },
+    {
+      "CLUB":"",
+      "NAME":"",
+      "EMAIL":"",
+      "PHONE":""
+    }
+  ]
+}
