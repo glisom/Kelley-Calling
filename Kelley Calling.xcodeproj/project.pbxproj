@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7B0F0ABB1981FBBB003E69C0 /* DirectoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F0ABA1981FBBB003E69C0 /* DirectoryViewCell.m */; };
+		7B13E74719B22E6600BF3A66 /* PTOBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B13E74619B22E6600BF3A66 /* PTOBoardViewController.m */; };
+		7B13E74B19B22F9000BF3A66 /* PTODetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B13E74A19B22F9000BF3A66 /* PTODetailViewController.m */; };
+		7B13E74E19B22FB700BF3A66 /* PTOViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B13E74D19B22FB700BF3A66 /* PTOViewCell.m */; };
 		7B2737DD197EC65600FB5F06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2737DC197EC65600FB5F06 /* Foundation.framework */; };
 		7B2737DF197EC65600FB5F06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2737DE197EC65600FB5F06 /* CoreGraphics.framework */; };
 		7B2737E1197EC65600FB5F06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2737E0197EC65600FB5F06 /* UIKit.framework */; };
@@ -70,6 +73,12 @@
 /* Begin PBXFileReference section */
 		7B0F0AB91981FBBB003E69C0 /* DirectoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewCell.h; sourceTree = "<group>"; };
 		7B0F0ABA1981FBBB003E69C0 /* DirectoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewCell.m; sourceTree = "<group>"; };
+		7B13E74519B22E6600BF3A66 /* PTOBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTOBoardViewController.h; sourceTree = "<group>"; };
+		7B13E74619B22E6600BF3A66 /* PTOBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTOBoardViewController.m; sourceTree = "<group>"; };
+		7B13E74919B22F9000BF3A66 /* PTODetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTODetailViewController.h; sourceTree = "<group>"; };
+		7B13E74A19B22F9000BF3A66 /* PTODetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTODetailViewController.m; sourceTree = "<group>"; };
+		7B13E74C19B22FB700BF3A66 /* PTOViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTOViewCell.h; sourceTree = "<group>"; };
+		7B13E74D19B22FB700BF3A66 /* PTOViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTOViewCell.m; sourceTree = "<group>"; };
 		7B2737D9197EC65600FB5F06 /* Kelley Calling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kelley Calling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2737DC197EC65600FB5F06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B2737DE197EC65600FB5F06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,7 +116,7 @@
 		7B9F43AE1986CFB3007EAD7E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7BBBB0BE198427F6003F273A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7BBBB0BF198427F6003F273A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		7BBBB0C3198452DA003F273A /* messagesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagesIcon.png; sourceTree = "<group>"; };
+		7BBBB0C3198452DA003F273A /* messagesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = messagesIcon.png; path = ../../messagesIcon.png; sourceTree = "<group>"; };
 		7BD15071198E9F86006A4393 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		7BD15072198E9F86006A4393 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7BD15075198EA200006A4393 /* BK-SBS1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BK-SBS1.jpg"; sourceTree = "<group>"; };
@@ -158,24 +167,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B13E74819B22E6E00BF3A66 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				7B273813197EC84B00FB5F06 /* Directory.h */,
+				7B273814197EC84B00FB5F06 /* Directory.m */,
+				7B568A9819A0083000D02BAF /* Pto.h */,
+				7B568A9919A0083000D02BAF /* Pto.m */,
+				7B568A9B19A0086C00D02BAF /* BkClub.h */,
+				7B568A9C19A0086C00D02BAF /* BkClub.m */,
+				7B568A9E19A0088000D02BAF /* Committees.h */,
+				7B568A9F19A0088000D02BAF /* Committees.m */,
+				7B273816197ECAA800FB5F06 /* JSONLoader.h */,
+				7B273817197ECAA800FB5F06 /* JSONLoader.m */,
+				7B69614D19809949007353AF /* BishopKelley.json */,
+				7B568A9419A0081900D02BAF /* pto.json */,
+				7B568A9219A0081900D02BAF /* bkclub.json */,
+				7B568A9319A0081900D02BAF /* committees.json */,
+			);
+			name = JSON;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		7B2737D0197EC65600FB5F06 = {
 			isa = PBXGroup;
 			children = (
-				7BBBB0C3198452DA003F273A /* messagesIcon.png */,
-				7B273816197ECAA800FB5F06 /* JSONLoader.h */,
-				7B273817197ECAA800FB5F06 /* JSONLoader.m */,
-				7B273813197EC84B00FB5F06 /* Directory.h */,
-				7B273814197EC84B00FB5F06 /* Directory.m */,
-				7B69614D19809949007353AF /* BishopKelley.json */,
-				7B568A9819A0083000D02BAF /* Pto.h */,
-				7B568A9919A0083000D02BAF /* Pto.m */,
-				7B568A9419A0081900D02BAF /* pto.json */,
-				7B568A9B19A0086C00D02BAF /* BkClub.h */,
-				7B568A9C19A0086C00D02BAF /* BkClub.m */,
-				7B568A9219A0081900D02BAF /* bkclub.json */,
-				7B568A9E19A0088000D02BAF /* Committees.h */,
-				7B568A9F19A0088000D02BAF /* Committees.m */,
-				7B568A9319A0081900D02BAF /* committees.json */,
 				7B2737E2197EC65600FB5F06 /* Kelley Calling */,
 				7B273801197EC65600FB5F06 /* Kelley CallingTests */,
 				7B2737DB197EC65600FB5F06 /* Frameworks */,
@@ -207,10 +223,16 @@
 		7B2737E2197EC65600FB5F06 /* Kelley Calling */ = {
 			isa = PBXGroup;
 			children = (
-				7BD15074198EA200006A4393 /* pictures */,
+				7B13E74819B22E6E00BF3A66 /* JSON */,
 				7B2737EB197EC65600FB5F06 /* AppDelegate.h */,
 				7B2737EC197EC65600FB5F06 /* AppDelegate.m */,
 				7B2737EE197EC65600FB5F06 /* Main.storyboard */,
+				7B13E74519B22E6600BF3A66 /* PTOBoardViewController.h */,
+				7B13E74619B22E6600BF3A66 /* PTOBoardViewController.m */,
+				7B13E74C19B22FB700BF3A66 /* PTOViewCell.h */,
+				7B13E74D19B22FB700BF3A66 /* PTOViewCell.m */,
+				7B13E74919B22F9000BF3A66 /* PTODetailViewController.h */,
+				7B13E74A19B22F9000BF3A66 /* PTODetailViewController.m */,
 				7BD15071198E9F86006A4393 /* HomeViewController.h */,
 				7BD15072198E9F86006A4393 /* HomeViewController.m */,
 				7BBBB0BE198427F6003F273A /* DetailViewController.h */,
@@ -232,6 +254,7 @@
 		7B2737E3197EC65600FB5F06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7BD15074198EA200006A4393 /* pictures */,
 				7B2737E4197EC65600FB5F06 /* Kelley Calling-Info.plist */,
 				7B2737E5197EC65600FB5F06 /* InfoPlist.strings */,
 				7B2737E8197EC65600FB5F06 /* main.m */,
@@ -261,6 +284,7 @@
 		7BD15074198EA200006A4393 /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				7BBBB0C3198452DA003F273A /* messagesIcon.png */,
 				7BD15099198EFE8E006A4393 /* arrow.png */,
 				7BD15075198EA200006A4393 /* BK-SBS1.jpg */,
 				7BD15076198EA200006A4393 /* BKH-2842-01_FBLogo_Sized_A.jpg */,
@@ -404,9 +428,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B568A9A19A0083000D02BAF /* Pto.m in Sources */,
+				7B13E74719B22E6600BF3A66 /* PTOBoardViewController.m in Sources */,
 				7B2737ED197EC65600FB5F06 /* AppDelegate.m in Sources */,
 				7B2737E9197EC65600FB5F06 /* main.m in Sources */,
 				7B273815197EC84B00FB5F06 /* Directory.m in Sources */,
+				7B13E74B19B22F9000BF3A66 /* PTODetailViewController.m in Sources */,
+				7B13E74E19B22FB700BF3A66 /* PTOViewCell.m in Sources */,
 				7BD15073198E9F86006A4393 /* HomeViewController.m in Sources */,
 				7B568AA019A0088000D02BAF /* Committees.m in Sources */,
 				7BBBB0C0198427F6003F273A /* DetailViewController.m in Sources */,
