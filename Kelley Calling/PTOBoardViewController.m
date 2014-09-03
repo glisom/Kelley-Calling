@@ -29,7 +29,7 @@
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"pto" withExtension:@"json"];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        info = [jsonLoader informationFromJSONFile:url];
+        info = [jsonLoader informationFromPTOFile:url];
         
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     });

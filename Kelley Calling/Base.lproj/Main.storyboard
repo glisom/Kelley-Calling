@@ -72,7 +72,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="830" y="-42"/>
+            <point key="canvasLocation" x="722" y="-754"/>
         </scene>
         <!--View Controller - About-->
         <scene sceneID="lS0-Vn-Qot">
@@ -119,12 +119,11 @@ It must not be used for personal gain, or be made available for commercial or so
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5A-S0-agF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="655" y="709"/>
+            <point key="canvasLocation" x="1935" y="61"/>
         </scene>
         <!--View Controller - Parent's Club-->
         <scene sceneID="pfC-tR-qXf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ddt-cd-Vs0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qA4-IX-yJy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6lq-Um-dr5"/>
@@ -229,8 +228,9 @@ Co-Chair - Julie Davidson</string>
                     </view>
                     <navigationItem key="navigationItem" title="Parent's Club" id="CU8-2S-Yju"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddt-cd-Vs0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="703"/>
+            <point key="canvasLocation" x="1736" y="919"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="nFJ-fx-ul5">
@@ -471,7 +471,7 @@ Co-Chair - Julie Davidson</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRc-1t-57f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="44"/>
+            <point key="canvasLocation" x="1250" y="-754"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="PrC-bp-TxW">
@@ -546,7 +546,7 @@ Co-Chair - Julie Davidson</string>
             </objects>
             <point key="canvasLocation" x="-59" y="44"/>
         </scene>
-        <!--Board View Controller-->
+        <!--Board View Controller - PTO Board-->
         <scene sceneID="nGT-Qa-Ve4">
             <objects>
                 <tableViewController id="jen-sI-7qU" customClass="PTOBoardViewController" sceneMemberID="viewController">
@@ -555,7 +555,7 @@ Co-Chair - Julie Davidson</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LocationCell" rowHeight="71" id="GWn-B5-SEf" customClass="PTOViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PTOCell" rowHeight="71" id="GWn-B5-SEf" customClass="PTOViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GWn-B5-SEf" id="67H-Xq-ovk">
@@ -581,6 +581,7 @@ Co-Chair - Julie Davidson</string>
                                 <connections>
                                     <outlet property="PostionLabel" destination="hPT-U8-nUb" id="TdZ-3z-vpK"/>
                                     <outlet property="nameLabel" destination="UgN-4J-Pu4" id="1ec-C6-RTW"/>
+                                    <segue destination="wxZ-w5-Jq7" kind="push" identifier="showPTODetail" id="wuf-Rr-6pk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -589,11 +590,127 @@ Co-Chair - Julie Davidson</string>
                             <outlet property="delegate" destination="jen-sI-7qU" id="ASD-fH-VRz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bxj-xS-KN8"/>
+                    <navigationItem key="navigationItem" title="PTO Board" id="bxj-xS-KN8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jT-jz-MEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-67" y="703"/>
+            <point key="canvasLocation" x="722" y="663"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="0cb-Lx-nVL">
+            <objects>
+                <tableViewController id="wxZ-w5-Jq7" customClass="PTODetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VBj-lH-R3k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="Ioa-Fb-e2L">
+                                <cells>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="62" id="4wL-ve-raz">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4wL-ve-raz" id="Q1n-WF-oaE">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Baron" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h5-V0-ylT">
+                                                    <rect key="frame" x="20" y="5" width="280" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBq-za-isN">
+                                                    <rect key="frame" x="20" y="37" width="280" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="93d-OY-xrc">
+                                        <rect key="frame" x="0.0" y="126" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="93d-OY-xrc" id="Y6X-h2-kGL">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYf-li-HDZ">
+                                                    <rect key="frame" x="20" y="0.0" width="280" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kX-v1-kRm">
+                                                    <rect key="frame" x="20" y="20" width="136" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                    <state key="normal" title="918-691-9891">
+                                                        <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="phonePressed:" destination="voe-Lj-LVH" eventType="touchUpInside" id="nZF-e9-5a7"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYq-mp-1oq">
+                                                    <rect key="frame" x="268" y="14" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="messagesIcon.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="messagePressed:" destination="voe-Lj-LVH" eventType="touchUpInside" id="kAt-Vw-dmF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="mi0-gV-Lot">
+                                        <rect key="frame" x="0.0" y="186" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mi0-gV-Lot" id="Gq1-XL-wqe">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6j-Xb-86Y">
+                                                    <rect key="frame" x="20" y="0.0" width="280" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYX-Bh-8VG">
+                                                    <rect key="frame" x="20" y="20" width="280" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                    <state key="normal" title="grant.isom@gmail.com">
+                                                        <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="wxZ-w5-Jq7" id="W0o-Ar-ad3"/>
+                            <outlet property="delegate" destination="wxZ-w5-Jq7" id="HYP-GP-B1A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="rFi-7G-Wdh"/>
+                    <connections>
+                        <outlet property="emailAddress" destination="MYX-Bh-8VG" id="4ro-My-wKp"/>
+                        <outlet property="name" destination="6h5-V0-ylT" id="Eoc-Zl-t0s"/>
+                        <outlet property="navBar" destination="rFi-7G-Wdh" id="dnI-dT-FPj"/>
+                        <outlet property="phoneNumber" destination="6kX-v1-kRm" id="VHu-tl-GqB"/>
+                        <outlet property="position" destination="iBq-za-isN" id="Xei-a9-glI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coF-aH-lP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250" y="663"/>
         </scene>
         <!--Home View Controller - BK 411-->
         <scene sceneID="60L-2E-RYU">
@@ -686,10 +803,10 @@ Co-Chair - Julie Davidson</string>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBR-vS-O5o">
-                                                <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                                <rect key="frame" x="20" y="7" width="280" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                <state key="normal" title="Parent's Club">
+                                                <state key="normal" title="BK Club">
                                                     <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -712,7 +829,7 @@ Co-Chair - Julie Davidson</string>
                                                 <rect key="frame" x="20" y="7" width="280" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                <state key="normal" title="Who To See at Kelley">
+                                                <state key="normal" title="Committees">
                                                     <color key="titleColor" red="0.76470595600000002" green="0.0" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
