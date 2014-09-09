@@ -27,6 +27,23 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:.67 green:0 blue:0 alpha:1];
+    if ([_pto.phone isEqual:@""]) {
+        _phoneNumber.enabled = NO;
+        [_phoneNumber setTitle:@"Not Found" forState:UIControlStateNormal];
+        [_phoneNumber setTitle:@"Not Found" forState:UIControlStateHighlighted];
+        [_phoneNumber setTitle:@"Not Found" forState:UIControlStateDisabled];
+        
+    }else {
+        [_phoneNumber setTitle:_pto.phone forState:UIControlStateNormal];
+        [_phoneNumber setTitle:_pto.phone forState:UIControlStateHighlighted];
+    }
+    if ([_pto.email isEqual:@""]) {
+        _emailAddress.enabled = NO;
+        [_emailAddress setTitle:@"Not Found" forState:UIControlStateDisabled];
+    } else {
+        [_emailAddress setTitle:_pto.email forState:UIControlStateNormal];
+        [_emailAddress setTitle:_pto.email forState:UIControlStateSelected];
+    }
     _name.text = _pto.name;
     if ([_pto.position isEqual:@"PRESIDENT:"]) {
         _position.text = @"President";
@@ -80,6 +97,54 @@
 
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (IBAction)phonePressed:(id)sender {
+    
+    if (![_pto.phone  isEqual: @""]) {
+        NSString *phoneNum = [NSString stringWithFormat:@"%@%@", @"tel:", _pto.phone];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNum]];
+    }
+    
+}
+
+- (IBAction)emailPressed:(id)sender {
+    if (![_pto.email isEqual:@""]) {
+        NSArray *myArray = [NSArray arrayWithObjects:_pto.email, nil];
+        if ([MFMailComposeViewController canSendMail]) {
+            
+            MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+            mailViewController.mailComposeDelegate = self;
+            [mailViewController setToRecipients:myArray];
+            [mailViewController setSubject:@""];
+            [mailViewController setMessageBody:@"" isHTML:NO];
+            
+            [self presentViewController:mailViewController animated:YES completion:NULL];
+        }
+        
+        else {
+            
+        }
+    }
+}
+
+- (IBAction)messagePressed:(id)sender {
+    if (![_pto.phone  isEqual: @""]) {
+        //NSString *phoneNum = [NSString stringWithFormat:@"%@%@", @"sms:", _directory.studentPhone];
+        //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNum]];
+        NSArray *myArray = [NSArray arrayWithObjects:_pto.phone, nil];
+        if ([MFMessageComposeViewController canSendText]) {
+            
+            MFMessageComposeViewController *messageView = [[MFMessageComposeViewController alloc] init];
+            messageView.messageComposeDelegate = self;
+            [messageView setRecipients:myArray];
+            [self presentViewController:messageView animated:YES completion:NULL];
+        }
+        
+        else {
+            
+        }
+    }
 }
 
 @end
