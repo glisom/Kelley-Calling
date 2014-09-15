@@ -37,6 +37,7 @@
 		7B9F43AF1986CFB3007EAD7E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9F43AE1986CFB3007EAD7E /* LoginViewController.m */; };
 		7BBBB0C0198427F6003F273A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBBB0BF198427F6003F273A /* DetailViewController.m */; };
 		7BBBB0C4198452DA003F273A /* messagesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BBBB0C3198452DA003F273A /* messagesIcon.png */; };
+		7BBF250B19C662D60091D958 /* ExtensionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBF250A19C662D60091D958 /* ExtensionsViewController.m */; };
 		7BD15073198E9F86006A4393 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD15072198E9F86006A4393 /* HomeViewController.m */; };
 		7BD15087198EA200006A4393 /* BK-SBS1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7BD15075198EA200006A4393 /* BK-SBS1.jpg */; };
 		7BD15088198EA200006A4393 /* BKH-2842-01_FBLogo_Sized_A.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7BD15076198EA200006A4393 /* BKH-2842-01_FBLogo_Sized_A.jpg */; };
@@ -57,6 +58,13 @@
 		7BD15098198EA200006A4393 /* sti12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7BD15086198EA200006A4393 /* sti12.jpg */; };
 		7BD1509A198EFE8E006A4393 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD15099198EFE8E006A4393 /* arrow.png */; };
 		7BD192A919857D63005DB209 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD192A819857D63005DB209 /* CoreData.framework */; };
+		7BF6631E19C665C9006CB856 /* BkClubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6631D19C665C9006CB856 /* BkClubViewController.m */; };
+		7BF6632219C6661B006CB856 /* BkClubDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6632119C6661B006CB856 /* BkClubDetailViewController.m */; };
+		7BF6632519C6663E006CB856 /* BkClubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6632419C6663E006CB856 /* BkClubTableViewCell.m */; };
+		7BF6632C19C66F75006CB856 /* CommitteesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6632B19C66F75006CB856 /* CommitteesTableViewCell.m */; };
+		7BF6632F19C66F88006CB856 /* CommitteesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6632E19C66F88006CB856 /* CommitteesViewController.m */; };
+		7BF6633219C66F9C006CB856 /* CommitteesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6633119C66F9C006CB856 /* CommitteesDetailView.m */; };
+		7BF6633419C67790006CB856 /* new.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6633319C67790006CB856 /* new.json */; };
 		7BFC8A49197F038400125AD8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC8A48197F038400125AD8 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +125,8 @@
 		7BBBB0BE198427F6003F273A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7BBBB0BF198427F6003F273A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7BBBB0C3198452DA003F273A /* messagesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = messagesIcon.png; path = ../../messagesIcon.png; sourceTree = "<group>"; };
+		7BBF250919C662D60091D958 /* ExtensionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionsViewController.h; sourceTree = "<group>"; };
+		7BBF250A19C662D60091D958 /* ExtensionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionsViewController.m; sourceTree = "<group>"; };
 		7BD15071198E9F86006A4393 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		7BD15072198E9F86006A4393 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7BD15075198EA200006A4393 /* BK-SBS1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "BK-SBS1.jpg"; sourceTree = "<group>"; };
@@ -138,6 +148,19 @@
 		7BD15086198EA200006A4393 /* sti12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sti12.jpg; sourceTree = "<group>"; };
 		7BD15099198EFE8E006A4393 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		7BD192A819857D63005DB209 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7BF6631C19C665C9006CB856 /* BkClubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BkClubViewController.h; path = ../BkClubViewController.h; sourceTree = "<group>"; };
+		7BF6631D19C665C9006CB856 /* BkClubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BkClubViewController.m; path = ../BkClubViewController.m; sourceTree = "<group>"; };
+		7BF6632019C6661B006CB856 /* BkClubDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BkClubDetailViewController.h; sourceTree = "<group>"; };
+		7BF6632119C6661B006CB856 /* BkClubDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BkClubDetailViewController.m; sourceTree = "<group>"; };
+		7BF6632319C6663E006CB856 /* BkClubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BkClubTableViewCell.h; sourceTree = "<group>"; };
+		7BF6632419C6663E006CB856 /* BkClubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BkClubTableViewCell.m; sourceTree = "<group>"; };
+		7BF6632A19C66F75006CB856 /* CommitteesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteesTableViewCell.h; sourceTree = "<group>"; };
+		7BF6632B19C66F75006CB856 /* CommitteesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteesTableViewCell.m; sourceTree = "<group>"; };
+		7BF6632D19C66F88006CB856 /* CommitteesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteesViewController.h; sourceTree = "<group>"; };
+		7BF6632E19C66F88006CB856 /* CommitteesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteesViewController.m; sourceTree = "<group>"; };
+		7BF6633019C66F9C006CB856 /* CommitteesDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteesDetailView.h; sourceTree = "<group>"; };
+		7BF6633119C66F9C006CB856 /* CommitteesDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteesDetailView.m; sourceTree = "<group>"; };
+		7BF6633319C67790006CB856 /* new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = new.json; sourceTree = "<group>"; };
 		7BFC8A47197F038400125AD8 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		7BFC8A48197F038400125AD8 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +193,7 @@
 		7B13E74819B22E6E00BF3A66 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				7BF6633319C67790006CB856 /* new.json */,
 				7B273813197EC84B00FB5F06 /* Directory.h */,
 				7B273814197EC84B00FB5F06 /* Directory.m */,
 				7B568A9819A0083000D02BAF /* Pto.h */,
@@ -224,27 +248,16 @@
 			isa = PBXGroup;
 			children = (
 				7B13E74819B22E6E00BF3A66 /* JSON */,
+				7BF6631F19C665E4006CB856 /* PTO */,
+				7BF6632619C66646006CB856 /* BKClub */,
+				7BF6632719C66E94006CB856 /* Home and Directory */,
+				7BF6632819C66EAD006CB856 /* Extensions */,
+				7BF6632919C66F2E006CB856 /* Committees */,
 				7B2737EB197EC65600FB5F06 /* AppDelegate.h */,
 				7B2737EC197EC65600FB5F06 /* AppDelegate.m */,
 				7B2737EE197EC65600FB5F06 /* Main.storyboard */,
-				7B13E74519B22E6600BF3A66 /* PTOBoardViewController.h */,
-				7B13E74619B22E6600BF3A66 /* PTOBoardViewController.m */,
-				7B13E74C19B22FB700BF3A66 /* PTOViewCell.h */,
-				7B13E74D19B22FB700BF3A66 /* PTOViewCell.m */,
-				7B13E74919B22F9000BF3A66 /* PTODetailViewController.h */,
-				7B13E74A19B22F9000BF3A66 /* PTODetailViewController.m */,
-				7BD15071198E9F86006A4393 /* HomeViewController.h */,
-				7BD15072198E9F86006A4393 /* HomeViewController.m */,
-				7BBBB0BE198427F6003F273A /* DetailViewController.h */,
-				7BBBB0BF198427F6003F273A /* DetailViewController.m */,
-				7B273819197ECCA400FB5F06 /* DirectoryViewController.h */,
-				7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */,
 				7B9F43AD1986CFB3007EAD7E /* LoginViewController.h */,
 				7B9F43AE1986CFB3007EAD7E /* LoginViewController.m */,
-				7B0F0AB91981FBBB003E69C0 /* DirectoryViewCell.h */,
-				7B0F0ABA1981FBBB003E69C0 /* DirectoryViewCell.m */,
-				7BFC8A47197F038400125AD8 /* DetailsViewController.h */,
-				7BFC8A48197F038400125AD8 /* DetailsViewController.m */,
 				7B2737F4197EC65600FB5F06 /* Images.xcassets */,
 				7B2737E3197EC65600FB5F06 /* Supporting Files */,
 			);
@@ -307,6 +320,71 @@
 			path = pictures;
 			sourceTree = "<group>";
 		};
+		7BF6631F19C665E4006CB856 /* PTO */ = {
+			isa = PBXGroup;
+			children = (
+				7B13E74519B22E6600BF3A66 /* PTOBoardViewController.h */,
+				7B13E74619B22E6600BF3A66 /* PTOBoardViewController.m */,
+				7B13E74C19B22FB700BF3A66 /* PTOViewCell.h */,
+				7B13E74D19B22FB700BF3A66 /* PTOViewCell.m */,
+				7B13E74919B22F9000BF3A66 /* PTODetailViewController.h */,
+				7B13E74A19B22F9000BF3A66 /* PTODetailViewController.m */,
+			);
+			name = PTO;
+			sourceTree = "<group>";
+		};
+		7BF6632619C66646006CB856 /* BKClub */ = {
+			isa = PBXGroup;
+			children = (
+				7BF6631C19C665C9006CB856 /* BkClubViewController.h */,
+				7BF6631D19C665C9006CB856 /* BkClubViewController.m */,
+				7BF6632019C6661B006CB856 /* BkClubDetailViewController.h */,
+				7BF6632119C6661B006CB856 /* BkClubDetailViewController.m */,
+				7BF6632319C6663E006CB856 /* BkClubTableViewCell.h */,
+				7BF6632419C6663E006CB856 /* BkClubTableViewCell.m */,
+			);
+			name = BKClub;
+			sourceTree = "<group>";
+		};
+		7BF6632719C66E94006CB856 /* Home and Directory */ = {
+			isa = PBXGroup;
+			children = (
+				7BD15071198E9F86006A4393 /* HomeViewController.h */,
+				7BD15072198E9F86006A4393 /* HomeViewController.m */,
+				7BBBB0BE198427F6003F273A /* DetailViewController.h */,
+				7BBBB0BF198427F6003F273A /* DetailViewController.m */,
+				7B273819197ECCA400FB5F06 /* DirectoryViewController.h */,
+				7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */,
+				7B0F0AB91981FBBB003E69C0 /* DirectoryViewCell.h */,
+				7B0F0ABA1981FBBB003E69C0 /* DirectoryViewCell.m */,
+				7BFC8A47197F038400125AD8 /* DetailsViewController.h */,
+				7BFC8A48197F038400125AD8 /* DetailsViewController.m */,
+			);
+			name = "Home and Directory";
+			sourceTree = "<group>";
+		};
+		7BF6632819C66EAD006CB856 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7BBF250919C662D60091D958 /* ExtensionsViewController.h */,
+				7BBF250A19C662D60091D958 /* ExtensionsViewController.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7BF6632919C66F2E006CB856 /* Committees */ = {
+			isa = PBXGroup;
+			children = (
+				7BF6632A19C66F75006CB856 /* CommitteesTableViewCell.h */,
+				7BF6632B19C66F75006CB856 /* CommitteesTableViewCell.m */,
+				7BF6632D19C66F88006CB856 /* CommitteesViewController.h */,
+				7BF6632E19C66F88006CB856 /* CommitteesViewController.m */,
+				7BF6633019C66F9C006CB856 /* CommitteesDetailView.h */,
+				7BF6633119C66F9C006CB856 /* CommitteesDetailView.m */,
+			);
+			name = Committees;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,6 +432,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Grant Isom";
 				TargetAttributes = {
+					7B2737D8197EC65600FB5F06 = {
+						DevelopmentTeam = 3D247B7547;
+					};
 					7B2737F9197EC65600FB5F06 = {
 						TestTargetID = 7B2737D8197EC65600FB5F06;
 					};
@@ -403,6 +484,7 @@
 				7B2737F0197EC65600FB5F06 /* Main.storyboard in Resources */,
 				7BD15095198EA200006A4393 /* sti09.jpg in Resources */,
 				7BD1508C198EA200006A4393 /* sti13.jpg in Resources */,
+				7BF6633419C67790006CB856 /* new.json in Resources */,
 				7BD1508A198EA200006A4393 /* sti15.jpg in Resources */,
 				7BD1508B198EA200006A4393 /* sti14.jpg in Resources */,
 				7BD15091198EA200006A4393 /* sti05.jpg in Resources */,
@@ -429,17 +511,24 @@
 			files = (
 				7B568A9A19A0083000D02BAF /* Pto.m in Sources */,
 				7B13E74719B22E6600BF3A66 /* PTOBoardViewController.m in Sources */,
+				7BF6633219C66F9C006CB856 /* CommitteesDetailView.m in Sources */,
+				7BF6632F19C66F88006CB856 /* CommitteesViewController.m in Sources */,
 				7B2737ED197EC65600FB5F06 /* AppDelegate.m in Sources */,
 				7B2737E9197EC65600FB5F06 /* main.m in Sources */,
 				7B273815197EC84B00FB5F06 /* Directory.m in Sources */,
 				7B13E74B19B22F9000BF3A66 /* PTODetailViewController.m in Sources */,
+				7BF6632519C6663E006CB856 /* BkClubTableViewCell.m in Sources */,
+				7BF6632C19C66F75006CB856 /* CommitteesTableViewCell.m in Sources */,
 				7B13E74E19B22FB700BF3A66 /* PTOViewCell.m in Sources */,
 				7BD15073198E9F86006A4393 /* HomeViewController.m in Sources */,
+				7BBF250B19C662D60091D958 /* ExtensionsViewController.m in Sources */,
 				7B568AA019A0088000D02BAF /* Committees.m in Sources */,
 				7BBBB0C0198427F6003F273A /* DetailViewController.m in Sources */,
+				7BF6631E19C665C9006CB856 /* BkClubViewController.m in Sources */,
 				7B568A9D19A0086C00D02BAF /* BkClub.m in Sources */,
 				7BFC8A49197F038400125AD8 /* DetailsViewController.m in Sources */,
 				7B9F43AF1986CFB3007EAD7E /* LoginViewController.m in Sources */,
+				7BF6632219C6661B006CB856 /* BkClubDetailViewController.m in Sources */,
 				7B27381B197ECCA400FB5F06 /* DirectoryViewController.m in Sources */,
 				7B0F0ABB1981FBBB003E69C0 /* DirectoryViewCell.m in Sources */,
 				7B273818197ECAA800FB5F06 /* JSONLoader.m in Sources */,
@@ -567,6 +656,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Grant Isom (3D247B7547)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kelley Calling/Kelley Calling-Prefix.pch";
 				INFOPLIST_FILE = "Kelley Calling/Kelley Calling-Info.plist";
@@ -580,6 +670,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Grant Isom (3D247B7547)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kelley Calling/Kelley Calling-Prefix.pch";
 				INFOPLIST_FILE = "Kelley Calling/Kelley Calling-Info.plist";

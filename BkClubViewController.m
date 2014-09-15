@@ -1,23 +1,22 @@
 //
-//  PTOBoardViewController.m
+//  BkClubViewController.m
 //  Kelley Calling
 //
-//  Created by Grant Isom on 8/30/14.
+//  Created by Grant Isom on 9/14/14.
 //  Copyright (c) 2014 Grant Isom. All rights reserved.
 //
 
-#import "PTOBoardViewController.h"
+#import "BkClubViewController.h"
 #import "JSONLoader.h"
-#import "Pto.h"
-#import "PTODetailViewController.h"
-#import "PTOViewCell.h"
+#import "BkClub.h"
+#import "BkClubDetailViewController.h"
+#import "BkClubTableViewCell.h"
 
-
-@interface PTOBoardViewController ()
+@interface BkClubViewController ()
 
 @end
 
-@implementation PTOBoardViewController {
+@implementation BkClubViewController{
     NSArray *info;
 }
 
@@ -25,28 +24,29 @@
 {
     [super viewDidLoad];
     
+    
     JSONLoader *jsonLoader = [[JSONLoader alloc] init];
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"pto" withExtension:@"json"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"bkclub" withExtension:@"json"];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        info = [jsonLoader informationFromPTOFile:url];
+        info = [jsonLoader informationFromClubFile:url];
         
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     });
     
-    [self.searchDisplayController.searchResultsTableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"PTOCell"];
+    [self.searchDisplayController.searchResultsTableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"BKClubCell"];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showPTODetail"]) {
+    if ([segue.identifier isEqualToString:@"showBKClubDetail"]) {
         NSIndexPath *indexPath = nil;
-        Pto *pto = nil;
+        BkClub *club = nil;
         
         indexPath = [self.tableView indexPathForSelectedRow];
-        pto = [info objectAtIndex:indexPath.row];
+        club = [info objectAtIndex:indexPath.row];
         
-        PTODetailViewController *destViewController = segue.destinationViewController;
-        destViewController.pto = pto;
+        BkClubDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.club = club;
     }
     
 }
@@ -66,31 +66,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"PTOCell";
-    PTOViewCell *cell = (PTOViewCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"BKClubCell";
+    BkClubTableViewCell *cell = (BkClubTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     if (cell == nil) {
-        cell = [[PTOViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[BkClubTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Pto *pto = nil;
+    BkClub *club = nil;
     
-    pto = [info objectAtIndex:indexPath.row];
+    club = [info objectAtIndex:indexPath.row];
     
-    cell.nameLabel.text = pto.name;
+    cell.nameLabel.text = club.name;
     
     NSString *position;
-    if ([pto.position isEqual:@"PRESIDENT"]) {
-        position = @"President";
-    } else if ([pto.position isEqual:@"PAST PRESIDENT"]) {
-        position = @"Past President";
-    } else if ([pto.position isEqual:@"PRESIDENT-ELECT"]) {
-        position = @"President Elect";
-    } else if ([pto.position isEqual:@"SECRETARY"]) {
-        position = @"Secretary";
+    if ([club.club isEqual:@"BK CLUB '15"]) {
+        position = @"BK Club '15";
+    } else if ([club.club isEqual:@"BK CLUB '16"]) {
+        position = @"BK Club '16";
+    } else if ([club.club isEqual:@"BK CLUB '17"]) {
+        position = @"BK Club '17";
     } else {
-        position = @"Treasurer";
+        position = @"BK Club '18";
     }
     
     cell.PostionLabel.text = position;

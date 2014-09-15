@@ -89,7 +89,7 @@
     
     NSMutableArray *directoryInfo = [[NSMutableArray alloc] init];
     
-    NSArray *array = [jsonDictionary objectForKey:@"COMMITTEE"];
+    NSArray *array = [jsonDictionary objectForKey:@"committees"];
     for(NSDictionary *dict in array) {
         Committees *list = [[Committees alloc] initWithJSONDictionary:dict];
         [directoryInfo addObject:list];

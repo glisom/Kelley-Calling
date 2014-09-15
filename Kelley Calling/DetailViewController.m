@@ -65,7 +65,7 @@
         [_emailAddress setTitle:_directory.studentEmail forState:UIControlStateSelected];
     }
     _parentsName.text = _directory.parentsName;
-    if ([_directory.homePhone isEqual:@""]) {
+    if ([_directory.homePhone isEqual:@""] || [_directory.homePhone isEqual:@"Unlisted"]) {
         _homePhone.enabled = NO;
         [_homePhone setTitle:@"Not Found" forState:UIControlStateNormal];
         [_homePhone setTitle:@"Not Found" forState:UIControlStateHighlighted];

@@ -27,7 +27,7 @@
     [super viewDidLoad];
 
     JSONLoader *jsonLoader = [[JSONLoader alloc] init];
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"BishopKelley" withExtension:@"json"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"new" withExtension:@"json"];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         info = [jsonLoader informationFromJSONFile:url];
