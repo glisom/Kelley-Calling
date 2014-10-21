@@ -27,6 +27,7 @@
 		7B273815197EC84B00FB5F06 /* Directory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B273814197EC84B00FB5F06 /* Directory.m */; };
 		7B273818197ECAA800FB5F06 /* JSONLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B273817197ECAA800FB5F06 /* JSONLoader.m */; };
 		7B27381B197ECCA400FB5F06 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */; };
+		7B519DBF19F5F42900874759 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B519DBE19F5F42900874759 /* login.png */; };
 		7B568A9519A0081900D02BAF /* bkclub.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B568A9219A0081900D02BAF /* bkclub.json */; };
 		7B568A9619A0081900D02BAF /* committees.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B568A9319A0081900D02BAF /* committees.json */; };
 		7B568A9719A0081900D02BAF /* pto.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B568A9419A0081900D02BAF /* pto.json */; };
@@ -110,6 +111,7 @@
 		7B273817197ECAA800FB5F06 /* JSONLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONLoader.m; sourceTree = "<group>"; };
 		7B273819197ECCA400FB5F06 /* DirectoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
 		7B27381A197ECCA400FB5F06 /* DirectoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
+		7B519DBE19F5F42900874759 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login.png; path = ../login.png; sourceTree = "<group>"; };
 		7B568A9219A0081900D02BAF /* bkclub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bkclub.json; sourceTree = "<group>"; };
 		7B568A9319A0081900D02BAF /* committees.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = committees.json; sourceTree = "<group>"; };
 		7B568A9419A0081900D02BAF /* pto.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pto.json; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 		7BD15074198EA200006A4393 /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				7B519DBE19F5F42900874759 /* login.png */,
 				7BBBB0C3198452DA003F273A /* messagesIcon.png */,
 				7BD15099198EFE8E006A4393 /* arrow.png */,
 				7BD15075198EA200006A4393 /* BK-SBS1.jpg */,
@@ -477,6 +480,7 @@
 				7BD15088198EA200006A4393 /* BKH-2842-01_FBLogo_Sized_A.jpg in Resources */,
 				7BD15087198EA200006A4393 /* BK-SBS1.jpg in Resources */,
 				7B2737F5197EC65600FB5F06 /* Images.xcassets in Resources */,
+				7B519DBF19F5F42900874759 /* login.png in Resources */,
 				7BD15096198EA200006A4393 /* sti10.jpg in Resources */,
 				7BD1508F198EA200006A4393 /* sti03.jpg in Resources */,
 				7B2737E7197EC65600FB5F06 /* InfoPlist.strings in Resources */,

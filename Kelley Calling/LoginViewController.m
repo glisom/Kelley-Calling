@@ -57,13 +57,13 @@
 }
 
 - (IBAction)loginPressed:(id)sender {
-    if ([_textField.text  isEqual: @"test"]) {
+    if ([_textField.text  isEqual: @"BKHS2014"]) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"LoggedIn"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         DirectoryViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Directory"];
         [self presentViewController:vc animated:YES completion:nil];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc]   initWithTitle:@"Incorrect Passkey"
+        UIAlertView *alert = [[UIAlertView alloc]   initWithTitle:@"Incorrect Code"
                                                           message:@"Try Again"
                                                          delegate:self
                                                 cancelButtonTitle:@"Okay"
@@ -71,6 +71,21 @@
         [alert show];
         _textField.text = nil;
     }
+}
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    //Keyboard becomes visible
+    self.loginView.frame = CGRectMake(self.loginView.frame.origin.x,
+                                  self.loginView.frame.origin.y,
+                                  self.loginView.frame.size.width,
+                                  self.loginView.frame.size.height - 215 + 50);   //resize
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    //keyboard will hide
+    self.loginView.frame = CGRectMake(self.loginView.frame.origin.x,
+                                  self.loginView.frame.origin.y,
+                                  self.loginView.frame.size.width,
+                                  self.loginView.frame.size.height + 215 - 50); //resize
 }
 
 @end

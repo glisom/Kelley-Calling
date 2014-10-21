@@ -12,20 +12,24 @@
 	<dict>
 		<key>91556C42-2628-45E2-9AF9-3B4A0CC6934A</key>
 		<string>https://github.com/glisom/Kelley-Calling.git</string>
+		<key>BCEDD004F2229A6E1CFBBC19E6576D64B74F626D</key>
+		<string>https://github.com/glisom/Kelley-Calling.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Kelley Calling.xcodeproj/project.xcworkspace</string>
+	<string>Kelley Calling.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>91556C42-2628-45E2-9AF9-3B4A0CC6934A</key>
+		<string>../../../Kelley Calling</string>
+		<key>BCEDD004F2229A6E1CFBBC19E6576D64B74F626D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/glisom/Kelley-Calling.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>91556C42-2628-45E2-9AF9-3B4A0CC6934A</string>
+	<string>BCEDD004F2229A6E1CFBBC19E6576D64B74F626D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>91556C42-2628-45E2-9AF9-3B4A0CC6934A</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Kelley Calling</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BCEDD004F2229A6E1CFBBC19E6576D64B74F626D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Kelley%20Calling</string>
 		</dict>
 	</array>
 </dict>
