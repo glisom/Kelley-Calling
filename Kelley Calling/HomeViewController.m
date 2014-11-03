@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "LoginViewController.h"
 
 @interface HomeViewController ()
 
@@ -30,13 +31,27 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:.67 green:0 blue:0 alpha:1];
     //scr=[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    
+    UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"Access Personal Information"
+                                                     message:@"By accepting this, you are agreeing only to use this information for personal use and you are a student, parent, or facutly member of Bishop Kelley High School."
+                                                    delegate:self
+                                           cancelButtonTitle: @"Cancel"
+                                           otherButtonTitles: @"Agree", nil];
+    [alert show];
     scr.userInteractionEnabled = NO;
     scr.tag = 1;
     //scr.autoresizingMask=UIViewAutoresizingNone;
     //[self.view addSubview:scr];
     [self setupScrollView:scr];
 
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex == 0){
+        LoginViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginScreen"];
+        [self presentViewController:vc animated:YES completion:nil];    }else if (buttonIndex == 1){
+        NSLog(@"ok");
+    }
 }
 
 - (void)setupScrollView:(UIScrollView*)scrMain {
